@@ -1,5 +1,24 @@
 {
   "dependencies": {
     "cypress": "^9.5.1"
-  }
+  },
+  "name": "christians-school-repository",
+  "description": "This is the readme file.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Colactic/Christians-School-Repository.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Colactic/Christians-School-Repository/issues"
+  },
+  "homepage": "https://github.com/Colactic/Christians-School-Repository#readme"
 }
