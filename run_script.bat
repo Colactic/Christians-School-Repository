@@ -1,1 +1,2 @@
-npx cypress run --spec cypress/integration/*.js
+npx cypress run --spec ./cypress/integration/*.js
+
