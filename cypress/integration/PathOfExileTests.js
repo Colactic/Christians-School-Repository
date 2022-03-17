@@ -81,6 +81,15 @@ describe('Click the Shop and make sure currency is 0 ', () => {
     })
 })
 
+describe('Make sure news items are visible', () => {
+    it('Check news item 1-3 exists and are visible', () => {
+        cy.visit('/')
+        cy.get('div.newsListItem').eq(0).should('exist').should('be.visible')
+        cy.get('div.newsListItem').eq(1).should('exist').should('be.visible')
+        cy.get('div.newsListItem').eq(2).should('exist').should('be.visible')
+    })
+})
+
 /*
 describe('Try to log in and fail', () => {
     it('Click Log In button, type in fake account details, try to log in and fail', () => {
