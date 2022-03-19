@@ -90,6 +90,20 @@ describe('Make sure news items are visible', () => {
     })
 })
 
+describe('Click on "Contact Support" and check to see if support items are clickable and exist', () => {
+    it('Click "Contact Support", click "Gameplay Help Forum" and check url. Click "Contact Support", click "Bug Reports forum" and check url. Click "Contact Support", check to see riot mail is visible', () => {
+        cy.visit('/')
+        cy.get('a.statusItem').eq(2).click()
+        cy.get('p').eq(1).find('a').eq(0).click()
+        cy.url().should('include', '/forum/view-forum/gameplay-discussion')
+        cy.get('a.statusItem').eq(2).click()
+        cy.get('p').eq(1).find('a').eq(1).click()
+        cy.url().should('include', '/forum/view-forum/bug-reports')
+        cy.get('a.statusItem').eq(2).click()
+        cy.get('p').eq(4).find('a').eq(0).should('exist').should('be.visible')
+    })
+})
+
 /*
 describe('Try to log in and fail', () => {
     it('Click Log In button, type in fake account details, try to log in and fail', () => {
